@@ -18,7 +18,7 @@
 					}else{
 						const now = new Date();
 						const diff = (Number(document.querySelector("select[name='st_hour']").value)-now.getHours())*3600 + (Number(document.querySelector("select[name='st_min']").value)-now.getMinutes())*60 + (Number(document.querySelector("select[name='st_sec']").value)-now.getSeconds())
-						document.querySelector("#go").disabled=true;
+						document.querySelector("#go").remove();
 						setTimeout(()=>{
 							liff.sendMessages([{
 								'type': 'text',

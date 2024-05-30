@@ -86,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         .catch(function (e) {
                             document.getElementById("log").value += "sendMessagesText()=" + e + "\n";
                         });
-                    liff.sendMessages([{ type: "text", text: document.getElementById("sendMessagesText").value }]);
                 }, 1000 * e);
             } else {
                 document.getElementById("log").value += "LIFF environment not available\n";

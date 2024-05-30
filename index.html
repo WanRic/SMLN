@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("go").addEventListener("click", () => {
             if (liff.isInClient()) {
                 const t = new Date();
-                let e = 3600 * (Number(document.querySelector("input[name='st_hour']").value) - t.getHours()) + 60 * (Number(document.querySelector("input[name='st_min']").value) - t.getMinutes()) + (Number(document.querySelector("input[name='st_sec']").value) - t.getSeconds() - 1);
+                let e = 3600 * (Number(document.querySelector("input[name='st_hour']").value) - t.getHours()) + 60 * (Number(document.querySelector("input[name='st_min']").value) - t.getMinutes()) + (Number(document.querySelector("input[name='st_sec']").value) - t.getSeconds() - 2);
 
                 document.querySelector("#go").value="Setting...";
                 document.querySelector("#go").disabled=true;

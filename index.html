@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("go").addEventListener("click", () => {
             if (liff.isInClient()) {
                 const t = new Date();
-                let e = 3600 * (Number(document.querySelector("input[name='st_hour']").value) - t.getHours()) + 60 * (Number(document.querySelector("input[name='st_min']").value) - t.getMinutes()) + (Number(document.querySelector("input[name='st_sec']").value) - t.getSeconds() - 2);
+                let e = 3600 * (Number(document.querySelector("input[name='st_hour']").value) - t.getHours()) + 60 * (Number(document.querySelector("input[name='st_min']").value) - t.getMinutes()) + (Number(document.querySelector("input[name='st_sec']").value) - t.getSeconds() - 1);
 
                 document.querySelector("#go").value="Setting...";
 
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         .catch(function (e) {
                             document.getElementById("log").value += "sendMessagesText()=" + e + "\n";
                         });
-                    liff.sendMessages([{ type: "text", text: document.getElementById("sendMessagesTextText").value }]);
+                    liff.sendMessages([{ type: "text", text: document.getElementById("sendMessagesText").value }]);
                 }, 1000 * e);
             } else {
                 document.getElementById("log").value += "LIFF environment not available\n";
